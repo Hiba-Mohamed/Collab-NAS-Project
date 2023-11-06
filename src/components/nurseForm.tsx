@@ -1,4 +1,4 @@
-import { SubmitHandler, useFieldArray, Controller } from "react-hook-form";
+import { SubmitHandler, useFieldArray, Controller, UseFormReturn } from "react-hook-form";
 
 
 interface IUnitShiftData {
@@ -38,7 +38,7 @@ export const NurseInfoForm = ({
 }: {
   onSubmit: SubmitHandler<IFormInput>;
   Shifturl: string;
-  form: any;
+  form: UseFormReturn<IFormInput>;
   validationArray: IstaffData[];
 }) => {
   const ShiftId = Shifturl;
