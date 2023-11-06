@@ -2,12 +2,37 @@ import { useParams } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
 import { useState, useEffect } from "react";
 
+
+interface IUnitShiftData {
+  unitName: string;
+  shiftDate: Date;
+  shiftType: string;
+}
+
+interface IData{
+  ShiftId: string;
+  data: IUnitShiftData;
+}
 interface IPatientData {
   patientName: string;
   patientRoom: string;
 }
 
-export function NurseCardDisplay({ staffData }: { staffData: any }) {
+interface IFormInput {
+  nurseName: string;
+  nurseBreak: string;
+  reliefName: string;
+  extraDuties: string;
+  fireCode: string;
+  assignedPatient: IPatientData[];
+}
+
+interface IstaffData{
+  nurseId: string;
+  nurseData: IFormInput;
+}
+
+export function NurseCardDisplay({ staffData }: { staffData: IstaffData[] }) {
   const { ShiftId } = useParams();
   const navigate = useNavigate();
   const existingDataJSON = localStorage.getItem("startShiftDataArray");
@@ -17,7 +42,7 @@ export function NurseCardDisplay({ staffData }: { staffData: any }) {
 
   // Find the shift data object with the matching shiftId
   const matchingData = existingData.find(
-    (data: any) => data.ShiftId === ShiftId
+    (data: IData) => data.ShiftId === ShiftId
   );
   const [nurses, setNurses] = useState(staffData);
 
@@ -31,7 +56,7 @@ export function NurseCardDisplay({ staffData }: { staffData: any }) {
     const exsitingNurseArray = nurses;
     // get the index of the nurse card
 
-    const updatedNurseList = exsitingNurseArray.filter((item: any) => {
+    const updatedNurseList = exsitingNurseArray.filter((item: IstaffData) => {
       return item.nurseId !== nurseId;
     });
 
@@ -52,7 +77,7 @@ export function NurseCardDisplay({ staffData }: { staffData: any }) {
    setNurses(staffData);
  }, staffData);
 
-  const editNurse = (ShiftId: any, nurseId: string) => {
+  const editNurse = (ShiftId: string, nurseId: string) => {
     navigate(`/editNurse/${ShiftId}/${nurseId}`);
 
     // 2- have the form autopopulated with the nurse info using nurseId
@@ -64,7 +89,7 @@ export function NurseCardDisplay({ staffData }: { staffData: any }) {
     
     return (
       <div className="flex flex-row flex-wrap justify-evenly">
-        {nurses.map((staffData: any, nurseIndex: number) => (
+        {nurses.map((staffData: IstaffData, nurseIndex: number) => (
           <div className="bg-white shadow-lg rounded-lg sm:px-8 sm:pt-6 sm:pb-8 my-4  max-w-sm mx-2 text-sm">
             <div key={nurseIndex} className="flex flex-col m-4">
               <div className="flex flex-col justify-center items-center text-center font-bold">

@@ -2,9 +2,9 @@ import { Link } from "react-router-dom";
 
 export function LandingPage() {
   return (
-    <div className="min-h-screen items-center bg-red-500 font-nunito pt-12 flex flex-col max-w-xl sm:max-w-full p-6">
+    <div className="min-h-screen items-center bg-gray-50 font-nunito pt-12 flex flex-col max-w-xl sm:max-w-full p-6">
       <div className="max-w-3xl">
-        
+
         <div className="rounded-3xl bg-white flex flex-col items-center mx-4 shadow-lg p-4 text-lg sm:text-2xl text-center font-bold">
           Welcome to the Electronic NAS (Nurses Assignment Sheet)
         </div>

@@ -5,6 +5,17 @@ import { v4 as uuidv4 } from "uuid";
 import { useForm, SubmitHandler } from "react-hook-form";
 import { useState } from "react";
 
+
+interface IUnitShiftData {
+  unitName: string;
+  shiftDate: Date;
+  shiftType: string;
+}
+
+interface IData{
+  ShiftId: string;
+  data: IUnitShiftData;
+}
 interface IPatientData {
   patientName: string;
   patientRoom: string;
@@ -18,6 +29,8 @@ interface IFormInput {
   fireCode: string;
   assignedPatient: IPatientData[];
 }
+
+
 
 function formatDate(dateString: string): string {
   const year = dateString.slice(0, 4);
@@ -49,7 +62,7 @@ function getMonthName(month: string): string {
   return months[monthIndex];
 }
 
-function retriveShiftDataLSwithShiftId(ShiftId: string): any {
+function retriveShiftDataLSwithShiftId(ShiftId: string) {
   // Retrieve shift data array from localStorage
   const existingDataJSON = localStorage.getItem("startShiftDataArray");
   const existingData = existingDataJSON ? JSON.parse(existingDataJSON) : [];
@@ -58,7 +71,7 @@ function retriveShiftDataLSwithShiftId(ShiftId: string): any {
 
   // Find the shift data object with the matching shiftId
   const matchingData = existingData.find(
-    (data: any) => data.ShiftId === ShiftId
+    (data:IData) => data.ShiftId === ShiftId
   );
 
   console.log("matching Data:", matchingData);
@@ -126,7 +139,7 @@ export function NurseForm() {
 
     // Find the shift data object with the matching ShiftId
     const matchingDataIndex = existingData.findIndex(
-      (data: any) => data.ShiftId === ShiftId
+      (data:IData) => data.ShiftId === ShiftId
     );
 
     if (matchingDataIndex !== -1) {
@@ -153,7 +166,7 @@ export function NurseForm() {
       const existingDataJSON = localStorage.getItem("startShiftDataArray");
       const existingData = existingDataJSON ? JSON.parse(existingDataJSON) : [];
       const matchingData = existingData.find(
-        (data: any) => data.ShiftId === ShiftId
+        (data: IData) => data.ShiftId === ShiftId
       );
 
       const staffData = matchingData.staff ?? [];

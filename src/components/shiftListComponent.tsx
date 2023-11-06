@@ -1,6 +1,21 @@
 import { useLocalStorage } from "@uidotdev/usehooks";
 import { useNavigate } from "react-router-dom";
 
+
+
+interface IUnitShiftData {
+  unitName: string;
+  shiftDate: string;
+  shiftType: string;
+}
+
+interface IData {
+  ShiftId: string;
+  data: IUnitShiftData;
+}
+
+
+
 export const ShiftListComponent = () => {
   const navigate = useNavigate();
   // Retrieve shift data array from localStorage
@@ -42,9 +57,9 @@ export const ShiftListComponent = () => {
     return months[monthIndex];
   }
 
-  existingData.sort((a: any, b: any) => {
-    const dateA = a.data.shiftDate;
-    const dateB = b.data.shiftDate;
+  existingData.sort((a: IData, b: IData) => {
+    const dateA = parseInt(a.data.shiftDate);
+    const dateB = parseInt(b.data.shiftDate);
     return dateB - dateA;
   });
 
@@ -62,7 +77,7 @@ export const ShiftListComponent = () => {
 
   function deleteShift(shiftId: string) {
     console.log("delete Shift", shiftId);
-    const updatedShiftList = existingData.filter((items: any) => {
+    const updatedShiftList = existingData.filter((items: IData) => {
       return items.ShiftId !== shiftId;
     });
 
@@ -77,7 +92,7 @@ export const ShiftListComponent = () => {
     return (
       <div className="flex flex-col md:flex-col items-center max-w-sm sm:max-w-2xl">
         <div className="flex flex-col lg:flex-col text-sm ms:text-md md:flex-col items-center max-w- sm:max-w-2xl">
-          {existingData.map((existingData: any) => (
+          {existingData.map((existingData: IData) => (
             <div
               className="sm:my-4 mx-2 sm:p-4 my-4 py-4 flex flex-col sm:flex-row items-center bg-white rounded-xl shadow-lg hover:shadow-xl hover:scale-105 transition duration-300 md:duration-500"
               key={existingData.ShiftId}

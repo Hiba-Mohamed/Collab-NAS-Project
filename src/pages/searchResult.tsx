@@ -2,6 +2,21 @@ import { useParams } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
 import { useLocalStorage } from "@uidotdev/usehooks";
 
+
+interface IUnitShiftData {
+  unitName: string;
+  shiftDate: string;
+  shiftType: string;
+}
+
+interface IData {
+  ShiftId: string;
+  data: IUnitShiftData;
+}
+
+
+
+
 export const SearchResults = () => {
   const { shiftDate, shiftType } = useParams();
   const navigate = useNavigate();
@@ -12,8 +27,8 @@ export const SearchResults = () => {
       existingData
     );
   const matchingShift = existingData.find(
-    (shift: any) =>
-      shift.data.shiftDate === shiftDate && shift.data.shiftType === shiftType
+    (shift: IData) =>
+      formatDate(shift.data.shiftDate) === shiftDate && shift.data.shiftType === shiftType
   );
 
   function viewShift(shiftId: string) {
@@ -28,7 +43,7 @@ export const SearchResults = () => {
 
   function deleteShift(shiftId: string) {
     console.log("delete Shift", shiftId);
-    const updatedShiftList = existingData.filter((items: any) => {
+    const updatedShiftList = existingData.filter((items: IData) => {
       return items.ShiftId !== shiftId;
     });
 

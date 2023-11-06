@@ -1,5 +1,16 @@
 import { SubmitHandler, useFieldArray, Controller } from "react-hook-form";
 
+
+interface IUnitShiftData {
+  unitName: string;
+  shiftDate: Date;
+  shiftType: string;
+}
+
+interface IData {
+  ShiftId: string;
+  data: IUnitShiftData;
+}
 interface IPatientData {
   patientName: string;
   patientRoom: string;
@@ -14,6 +25,11 @@ interface IFormInput {
   assignedPatient: IPatientData[];
 }
 
+interface IstaffData {
+  nurseId: string;
+  nurseData: IFormInput;
+}
+
 export const NurseInfoForm = ({
   onSubmit,
   Shifturl,
@@ -23,7 +39,7 @@ export const NurseInfoForm = ({
   onSubmit: SubmitHandler<IFormInput>;
   Shifturl: string;
   form: any;
-  validationArray: any;
+  validationArray: IstaffData[];
 }) => {
   const ShiftId = Shifturl;
 
@@ -36,7 +52,7 @@ export const NurseInfoForm = ({
 
   // Find the shift data object with the matching shiftId
   const matchingData = existingData.find(
-    (data: any) => data.ShiftId === ShiftId
+    (data: IData) => data.ShiftId === ShiftId
   );
 
   const shiftData = matchingData;
@@ -66,7 +82,7 @@ export const NurseInfoForm = ({
     // Check if nurseName already exists in the staff data
     if (staffData !== 0 && staffData !== undefined) {
       const isDuplicate = validationArray.some(
-        (nurse: any) =>
+        (nurse: IstaffData) =>
           nurse.nurseData.nurseName.toLowerCase() === nurseName.toLowerCase()
       );
 
@@ -80,9 +96,9 @@ export const NurseInfoForm = ({
 
     // Check if the provided patientName already exists in the assignedPatient array
     if (staffData && patientName !== "" && patientName !== undefined) {
-      const isDuplicate = validationArray.some((nurse: any) =>
+      const isDuplicate = validationArray.some((nurse: IstaffData) =>
         nurse.nurseData.assignedPatient.some(
-          (patient: any) =>
+          (patient: IPatientData) =>
             patient.patientName.toLowerCase() === patientName.toLowerCase()
         )
       );
@@ -91,16 +107,16 @@ export const NurseInfoForm = ({
       }
       return true;
     }
-    // If no duplicate is found  or if the input is empty string in any of the form inputs, return true
+    // If no duplicate is found  or if the input is empty string in one of the form inputs, return true
     return true;
   };
 
   const validatePatientRoom = (patientRoom: string) => {
     // Check if the provided patientName already exists in the assignedPatient array
     if (staffData && patientRoom !== "" && patientRoom !== undefined) {
-      const isDuplicate = validationArray.some((nurse: any) =>
+      const isDuplicate = validationArray.some((nurse: IstaffData) =>
         nurse.nurseData.assignedPatient.some(
-          (patient: any) =>
+          (patient: IPatientData) =>
             patient.patientRoom.toLowerCase() === patientRoom.toLowerCase()
         )
       );
@@ -110,7 +126,7 @@ export const NurseInfoForm = ({
       return true;
     }
 
-    // If no duplicate is found in any of the form inputs, return true
+    // If no duplicate is found in one of the form inputs, return true
     return true;
   };
   console.log(errors);

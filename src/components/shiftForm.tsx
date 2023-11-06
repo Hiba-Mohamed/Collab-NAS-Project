@@ -5,10 +5,21 @@ import { useNavigate } from "react-router-dom";
 import { v4 as uuidv4 } from "uuid";
 import { useState } from "react";
 
+
 interface IUnitShiftData {
   unitName: string;
   shiftDate: Date;
   shiftType: string;
+}
+
+interface IData {
+  ShiftId: string;
+  data: IUnitShiftData;
+}
+
+interface IDatesWithTypes{
+  shiftDate:string;
+  shiftType:string;
 }
 
 const ShiftForm = () => {
@@ -42,7 +53,7 @@ const ShiftForm = () => {
     // Retrieve existing data from localStorage or create an empty array
     const existingDataJSON = localStorage.getItem("startShiftDataArray");
     const existingData = existingDataJSON ? JSON.parse(existingDataJSON) : [];
-    const existingDatesWithTypes = existingData.map((item: any) => {
+    const existingDatesWithTypes = existingData.map((item: IData) => {
       const { shiftDate, shiftType } = item.data; // Remove the first property (unitName)
       return { shiftDate, shiftType }; // Create a new object without the first property
     });
@@ -56,7 +67,7 @@ const ShiftForm = () => {
     console.log("currentShift", currentShift);
 
     const isDuplicateShift = existingDatesWithTypes.some(
-      (item: any) =>
+      (item: IDatesWithTypes) =>
         item.shiftDate === currentShift.shiftDate &&
         item.shiftType === currentShift.shiftType
     );

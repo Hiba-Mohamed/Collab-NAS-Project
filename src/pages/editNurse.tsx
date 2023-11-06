@@ -4,6 +4,17 @@ import { useNavigate } from "react-router-dom";
 import NurseInfoForm from "../components/nurseForm";
 import { useState } from "react";
 
+
+interface IUnitShiftData {
+  unitName: string;
+  shiftDate: Date;
+  shiftType: string;
+}
+
+interface IData {
+  ShiftId: string;
+  data: IUnitShiftData;
+}
 interface IPatientData {
   patientName: string;
   patientRoom: string;
@@ -18,6 +29,11 @@ interface IFormInput {
   assignedPatient: IPatientData[];
 }
 
+interface IstaffData {
+  nurseId: string;
+  nurseData: IFormInput;
+}
+
 export function EditNursePage() {
   const { ShiftId, nurseId } = useParams();
   const navigate = useNavigate();
@@ -28,7 +44,7 @@ export function EditNursePage() {
     if (isnotDuplicate) {
       console.log("data of the edited nurse", data);
       const targetNurse = staffData.find(
-        (nurse: any) => nurse.nurseId === nurseId
+        (nurse: IstaffData) => nurse.nurseId === nurseId
       );
       console.log("target nurse", targetNurse);
       targetNurse.nurseData = data;
@@ -81,7 +97,7 @@ export function EditNursePage() {
 
   // Find the shift data object with the matching shiftId
   const matchingData = existingData.find(
-    (data: any) => data.ShiftId === ShiftId
+    (data:IData) => data.ShiftId === ShiftId
   );
 
   console.log("matching Data:", matchingData);
@@ -89,7 +105,7 @@ export function EditNursePage() {
 
   const staffData = matchingData.staff;
   const validationArray = staffData.filter(
-    (nurse: any) => nurse.nurseId !== nurseId
+    (nurse: IstaffData) => nurse.nurseId !== nurseId
   );
   console.log("validationArray", validationArray);
 
@@ -98,7 +114,7 @@ export function EditNursePage() {
   const matchingStaff = matchingData.staff;
   console.log("matching staff from edit nurse page", matchingStaff);
   const matchingNurse = matchingStaff.find(
-    (nurse: any) => nurse.nurseId === nurseId
+    (nurse: IstaffData) => nurse.nurseId === nurseId
   );
   console.log("matching nurse", matchingNurse);
   const matchingNurseData = matchingNurse.nurseData;

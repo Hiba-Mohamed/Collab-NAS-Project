@@ -5,7 +5,22 @@ interface IPatientData {
   patientRoom: string;
 }
 
-export function ViewNurseCard({ staffData }: { staffData: any }) {
+interface IFormInput {
+  nurseName: string;
+  nurseBreak: string;
+  reliefName: string;
+  extraDuties: string;
+  fireCode: string;
+  assignedPatient: IPatientData[];
+}
+
+interface IstaffData {
+  nurseId: string;
+  nurseData: IFormInput;
+}
+
+
+export function ViewNurseCard({ staffData }: { staffData: IstaffData[] }) {
   const { ShiftId } = useParams();
   console.log(staffData);
 
@@ -13,7 +28,7 @@ export function ViewNurseCard({ staffData }: { staffData: any }) {
   if (ShiftId && staffData.length !== 0) {
     return (
       <div className="flex flex-row flex-wrap justify-evenly">
-        {staffData?.map((staffData: any, nurseIndex: number) => (
+        {staffData?.map((staffData: IstaffData, nurseIndex: number) => (
           <div className="bg-white shadow-lg rounded-lg sm:px-4 sm:pt-2 sm:pb-4 my-4  max-w-sm mx-2 text-sm  lg:text-l sm:text-md">
             <div key={nurseIndex} className="flex flex-col m-4">
               <div className="flex flex-col justify-center items-center text-center font-bold">
