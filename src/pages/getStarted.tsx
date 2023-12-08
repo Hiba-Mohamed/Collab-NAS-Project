@@ -81,7 +81,7 @@ export function GetStarted() {
   };
 
   return (
-    <div className="flex flex-col items-center font-OpenSans lg:pt-24 bg-sky-50 min-h-screen">
+    <div className="flex flex-col items-center font-OpenSans lg:pt-12 bg-sky-50 min-h-screen">
       <h1 className="text-center font-bold text-2xl  sm:text-4xl py-16 p-12">
         Create a Hospital Profile
       </h1>

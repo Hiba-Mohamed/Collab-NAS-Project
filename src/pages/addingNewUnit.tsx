@@ -115,8 +115,8 @@ export function NewUnit() {
     }
   };
   return (
-    <div className="flex flex-col items-center font-OpenSans lg:pt-24 bg-sky-50 min-h-screen">
-      <div className="flex flex-col items-center justify-center py-6 sm:py-12">
+    <div className="flex flex-col font-OpenSans lg:pt-12 bg-sky-50 min-h-screen">
+      <div className="flex flex-col items-center justify-center py-6">
         {" "}
         <h1 className="text-center font-bold text-2xl  sm:text-4xl p-12">
           Create a Unit Profile for {hospitalData.hospitalName}

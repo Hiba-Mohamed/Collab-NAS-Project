@@ -42,10 +42,11 @@ export function LandingPage() {
               <div className="lg:w-56 lg:text-lg">
                 <div className="pb-4">
                   <p className="font-extrabold">Step 1: </p>
-                  <p className="font-extrabold">Navigate</p>
+                  <p className="font-extrabold">Create Hospital Profile</p>
                 </div>
                 <p className="sm:text-sm">
-                  Click on "Create New Shift" in the top navigation bar.
+                  Click on "Get Started" button above to create a Hospital
+                  profile.
                 </p>
               </div>
             </div>
@@ -60,9 +61,11 @@ export function LandingPage() {
               <div className="lg:w-56 lg:text-lg">
                 <div className="pb-4">
                   <p className="font-extrabold">Step 2: </p>
-                  <p className="font-extrabold">Create New shift</p>
+                  <p className="font-extrabold">Create New Unit profile</p>
                 </div>
-                <p className="sm:text-sm">Fill in the three steps form.</p>
+                <p className="sm:text-sm">
+                  Type your new hospital units's name.
+                </p>
               </div>
             </div>
           </div>
@@ -78,15 +81,14 @@ export function LandingPage() {
               <div className="lg:w-56 lg:text-lg">
                 <div className="pb-4">
                   <p className="font-extrabold">Step 3: </p>
-                  <p className="font-extrabold">Add staff and patients</p>
+                  <p className="font-extrabold">Create New Shifts</p>
                 </div>
                 <p className="sm:text-sm">
-                  Use the nurse's information form to dynamically add nurses to
-                  your shift.
+                  Click on the icon on the left to start creating shifts for the
+                  unit.
                 </p>
                 <p className="pt-4 sm:text-sm">
-                  * Duplication of nurse's name, patient's name, and room number
-                  will be prevented.
+                  Specify the date and type of the shift.
                 </p>{" "}
               </div>
             </div>
@@ -114,17 +116,19 @@ export function LandingPage() {
           <div className="flex flex-col rounded-lg bg-white flex flex-row items-start px-6 shadow-lg text-start max-w-xl m-2 py-4 w-80 lg:w-500">
             <div className="flex lg:flex-row-reverse flex-col gap-2">
               <img
-                src="images/features1.png"
+                src="images/features5.png"
                 alt=""
-                className="rounded-xl lg:w-56"
+                className="rounded-xl lg:w-60"
               />
               <div className="lg:w-56 lg:text-lg">
                 <div className="pb-4">
                   <p className="font-extrabold">Step 5: </p>
-                  <p className="font-extrabold">Access All Created Shifts</p>
+                  <p className="font-extrabold">Review or Search for Shifts</p>
                 </div>
-                <p className="sm:text-sm">
-                  Click on "Shift Record" in the top navigation bar.
+                <p className="sm:text-sm"> Click on the icon on the left to access your shifts record.</p>
+                <p className="sm:text-sm pt-2">
+                  Shifts are autosaved and organized from newest to oldest. Use
+                  the search bar to quickly find a specific shift.
                 </p>
               </div>
             </div>
@@ -138,14 +142,14 @@ export function LandingPage() {
               />
               <div className="lg:w-56 lg:text-lg">
                 <div className="pb-4">
-                  <p className="font-extrabold">Step 6: </p>
-                  <p className="font-extrabold">Review or Search for Shifts</p>
+                  <p className="font-extrabold">Step 5: </p>
+                  <p className="font-extrabold">Review Hospital Profile</p>
                 </div>
                 <p className="sm:text-sm">
-                  Shifts are autosaved and organized from newest to oldest.
+                  Click on "Hospital Units" from the navigation menu.
                 </p>
                 <p className="sm:text-sm pt-2">
-                  Use the search bar to quickly find a specific shift.
+                  Review and edit your Hospital profile as necassary.
                 </p>
               </div>
             </div>
