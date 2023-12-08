@@ -13,14 +13,68 @@ import EditNursePage from "./pages/editNurse";
 import ViewShift from "./pages/viewShift";
 import SearchResults from "./pages/searchResult";
 import LandingPage from "./pages/introPage";
+import GetStarted from "./pages/getStarted";
+import HospitalView from "./pages/hospitalView";
+import NewUnit from "./pages/addingNewUnit";
+import { StartUnitSheet } from "./pages/startUnitShift";
+import UnitNurseForm from "./pages/manageUnitStaff";
+import EditUnitNursePage from "./pages/editUnitNurse";
+import SpecificUnitNav from "./pages/specificUnitNav";
+import { UnitShiftHistory } from "./pages/unitShiftHistory";
+import ViewUnitShift from "./pages/viewUnitShift";
+import SearchUnitResults from "./pages/searchUnitResult";
+import EditUnit from "./pages/editUnitName";
+import { EditShiftInfo } from "./pages/editShiftInfo";
+import StartStaff from "./pages/addNurse";
+
 
 function App() {
   return (
     <div className="App">
       <Heading />
-
       <Routes>
+        <Route path="/addingNewUnit" element={<NewUnit />} />
+        <Route path="/hospitalView" element={<HospitalView />} />
+        <Route path="getStarted" element={<GetStarted />} />
         <Route path="/" element={<LandingPage />} />
+        <Route
+          path="/addNurse/:unitName/:ShiftId"
+          element={<StartStaff />}
+        />
+        <Route path="/editUnitName/:unitName" element={<EditUnit />} />
+        <Route
+          path="/editShiftInfo/:unitName/:ShiftId"
+          element={<EditShiftInfo />}
+        />
+        <Route
+          path="/unitShiftHistory/:unitName"
+          element={<UnitShiftHistory />}
+        />
+        <Route
+          path="/searchUnitResult/:unitName/:shiftDate/:shiftType"
+          element={<SearchUnitResults />}
+        />
+
+        <Route
+          path="/viewUnitShift/:unitName/:ShiftId"
+          element={<ViewUnitShift />}
+        />
+
+        <Route
+          path="/editUnitNurse/:unitName/:ShiftId/:nurseId"
+          element={<EditUnitNursePage />}
+        />
+        <Route
+          path="/specificUnitNav/:unitName"
+          element={<SpecificUnitNav />}
+        />
+
+        <Route
+          path="/manageUnitStaff/:unitName/:ShiftId"
+          element={<UnitNurseForm />}
+        />
+
+        <Route path="/startUnitShift/:unitName" element={<StartUnitSheet />} />
         <Route path="/viewShift/:ShiftId" element={<ViewShift />} />
         <Route
           path="/searchResult/:shiftDate/:shiftType"
@@ -30,12 +84,12 @@ function App() {
         <Route path="/about" element={<AboutPage />} />
         <Route path="/login" element={<Login />} />
         <Route path="/account" element={<Account />} />
-        <Route path="/manageStaff/:ShiftId" element={<NurseForm />} />
+        <Route path="/manageStaff/:unitName/:ShiftId" element={<NurseForm />} />
         <Route path="/unitNav" element={<UnitNav />} />
         <Route path="/shiftHistory" element={<ShiftHistory />} />
-        <Route path="/startSheet" element={<StartSheet />} />
-        <Route path="/introPage" element={<LandingPage />} />
+        <Route path="/startSheet/:unitName" element={<StartSheet />} />
 
+        <Route path="/introPage" element={<LandingPage />} />
         <Route
           path="/editNurse/:ShiftId/:nurseId"
           element={<EditNursePage />}

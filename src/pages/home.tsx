@@ -2,16 +2,9 @@ import { Link } from "react-router-dom";
 
 export function Home() {
   return (
-    <div
-      className="bg-cover bg-repeat bg-opacity-10 h-screen mx-auto"
-    >
-      <div className="font-nunito flex flex-row relative max-w-3xl sm:max-w-5xl mx-auto mb-16 pt-20">
+    <div className="bg-cover bg-repeat bg-opacity-10 h-screen mx-auto">
+      <div className="font-OpenSans flex flex-row relative max-w-3xl sm:max-w-5xl mx-auto mb-16 pt-20">
         <div className="flex flex-col items-center w-screen mb-8">
-          <img
-            src="images/NAS-logo.png"
-            className="w-20 sm:w-20"
-            alt="Nurses Assignment Sheet logo"
-          />
           <img
             src="images/nurse-pic.png"
             className="w-72 sm:w-80"
@@ -24,16 +17,10 @@ export function Home() {
 
           <div className="flex items-center flex-col sm:flex-row gap-4 sm:pt-4 pt-10">
             <Link
-              className="bg-slate-200 hover:bg-slate-100 text-cyan-700 font-bold sm:py-4 sm:px-8 py-4 px-16 rounded lg:text-xl text-md"
-              to="/account"
+              to="/getStarted"
+              className="bg-cyan-700 hover:bg-cyan-600 text-white font-bold sm:py-4 sm:px-14 py-4 px-24 rounded sm:text-xl text-md"
             >
-              Create Account
-            </Link>
-            <Link
-              to="/login"
-              className="bg-cyan-700 hover:bg-cyan-600 text-white font-bold sm:py-4 sm:px-14 py-4 px-24 rounded lg:text-xl text-md"
-            >
-              Login
+              Get Started
             </Link>
           </div>
         </div>
