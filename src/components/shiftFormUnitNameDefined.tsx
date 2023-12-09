@@ -161,7 +161,8 @@ const UnitShiftForm = (unitName: { unitName: string }) => {
   return (
     <div className="flex flex-col items-center">
       {errorMessage && (
-        <div className="bg-white sm:px-8 shadow-lg rounded-lg max-w-sm  sm:max-w-xl text-xsm p-4 sm:text-sm text-center mx-4">
+        <div className="bg-white sm:px-8 shadow-lg flex flex-col sm:flex-row items-center sm:w-80 w-60 max-w-sm rounded-lg max-w-sm  sm:max-w-xl text-xsm p-4 sm:text-sm text-center mx-4">
+          <img className="w-20 sm:w-16" src="images/danger-icon.png" />{" "}
           <p className="text-peach ">{errorMessage}</p>
         </div>
       )}{" "}
@@ -200,8 +201,8 @@ const UnitShiftForm = (unitName: { unitName: string }) => {
             <select
               {...register("shiftType", { required: true })}
               className={`w-full px-2 mt-2 appearance-none py-2 rounded-md border border-blue-300 focus:outline-none focus:ring-2 focus:ring-blue-500 ${
-                        !watch("shiftType") && "opacity-50"
-                      }`}
+                !watch("shiftType") && "opacity-50"
+              }`}
               placeholder="pick a shift"
             >
               <option

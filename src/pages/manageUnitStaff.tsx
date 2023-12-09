@@ -186,7 +186,11 @@ export function UnitNurseForm() {
                   Cancel
                 </button>
                 {errorMessage && (
-                  <div className="text-peach bg-peach text-white shadow-lg rounded-lg max-w-sm m-4 p-4">
+                  <div className="bg-white sm:px-8 shadow-lg flex flex-col mb-8 sm:flex-row items-center sm:w-80 w-60 max-w-sm rounded-lg max-w-sm  sm:max-w-xl text-xsm p-4 sm:text-sm text-center mx-4">
+                    <img
+                      className="w-20 sm:w-16"
+                      src="images/danger-icon.png"
+                    />{" "}
                     {errorMessage}
                   </div>
                 )}
@@ -253,7 +257,7 @@ export function UnitNurseForm() {
             className="flex flex-col items-center mt-12 lg:mt-24"
             to={`/viewUnitShift/${unitName}/${ShiftId}`}
           >
-            <button className="bg-white hover:bg-blue hover:text-white text-blue border-solid border-2 border-blue font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline">
+            <button className="mb-12 bg-white hover:bg-blue hover:text-white text-blue border-solid border-2 border-blue font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline">
               Done
             </button>{" "}
           </Link>

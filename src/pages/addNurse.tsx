@@ -115,7 +115,7 @@ export function StartStaff() {
         navigate(`/manageUnitStaff/${unitName}/${ShiftId}`);
     } else
       setErrorMessage(
-        "Error: duplicate patient name and/or room is being assigned to the same nurse"
+        "Duplicate patient name and/or room is being assigned to the same nurse"
       );
   };
 
@@ -201,7 +201,8 @@ export function StartStaff() {
               shiftDate={formatDate(matchingShift.data.shiftDate)}
             />
             {errorMessage && (
-              <div className="text-peach bg-peach text-white shadow-lg rounded-lg max-w-sm m-4 p-4">
+              <div className="bg-white sm:px-8 shadow-lg flex flex-col sm:flex-row items-center mb-8 sm:w-80 w-60 max-w-sm rounded-lg max-w-sm  sm:max-w-xl text-xsm p-4 sm:text-sm text-center mx-4">
+                <img className="w-20 sm:w-16" src="images/danger-icon.png" />{" "}
                 {errorMessage}
               </div>
             )}

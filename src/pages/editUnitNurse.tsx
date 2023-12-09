@@ -174,7 +174,8 @@ export function EditUnitNursePage() {
             validationArray={validationArray}
           />
           {errorMessage && (
-            <div className="text-peach bg-peach text-white shadow-lg rounded-lg max-w-sm m-4 p-4">
+            <div className="bg-white sm:px-8 shadow-lg flex flex-col mb-8 sm:flex-row items-center sm:w-80 w-60 max-w-sm rounded-lg max-w-sm  sm:max-w-xl text-xsm p-4 sm:text-sm text-center mx-4">
+              <img className="w-20 sm:w-16" src="images/danger-icon.png" />{" "}
               {errorMessage}
             </div>
           )}
