@@ -2,29 +2,32 @@ import { Link } from "react-router-dom";
 
 export function LandingPage() {
   return (
-    <div className="min-h-screen items-center bg-sky-50 font-OpenSans pt-12 flex flex-col max-w-xl sm:max-w-full py-6 px-2">
-      <div className="max-w-3xl flex flex-col items-center">
-        <div className="flex sm:pt-12 flex-col  lg:text-5xl items-center py-4 text-blue text-2xl sm:text-4xl text-center font-bold">
-          <p>Welcome to the Electronic NAS </p>
-          <p> (Nurses Assignment Sheet)!</p>
-        </div>
-        <div className="flex flex-col items-center p-4 text-start  mb-6 p-12">
-          <p className="text-center text-md sm:text-lg lg:text-xl">
-            The NAS is an elctronic document that replaces the paper-based
-            nurses assignment sheet used in some healthcare settings. It is used
-            to communicate vital information to nurses and other staff
-            throughout the shift.
-          </p>
-        </div>
-        <Link
-          to="/getStarted"
-          className="bg-blue lg:text-lg hover:bg-sky-500 text-white font-bold py-2 px-10 rounded-lg mb-12 focus:outline-none focus:shadow-outline"
-        >
-          {" "}
-          Get Started!
-        </Link>
-      </div>
+    <div className="min-h-screen items-center bg-sky-50 font-OpenSans flex flex-col max-w-xl sm:max-w-full px-2">
+      <div className="flex flex-row bg-[url('/images/banner.png')] w-full items-center justify-center bg-cover">
 
+        <div className="max-w-3xl flex flex-col w-full items-center pt-12">
+          <div className="flex sm:pt-12 flex-col  lg:text-5xl items-center py-4 text-blue text-2xl sm:text-4xl text-center font-bold">
+            <p>Welcome to the Electronic NAS </p>
+            <p> (Nurses Assignment Sheet)!</p>
+          </div>
+          <div className="flex flex-col items-center p-4 text-start  mb-6 p-12">
+            <p className="text-center text-md sm:text-lg lg:text-xl">
+              The NAS is an elctronic document that replaces the paper-based
+              nurses assignment sheet used in some healthcare settings. It is
+              used to communicate vital information to nurses and other staff
+              throughout the shift.
+            </p>
+          </div>
+          <Link
+            to="/getStarted"
+            className="bg-blue lg:text-lg hover:bg-sky-500 text-white font-bold py-2 px-10 rounded-lg mb-12 focus:outline-none focus:shadow-outline"
+          >
+            {" "}
+            Get Started!
+          </Link>
+        </div>
+
+      </div>
       <div className="flex flex-row items-center sm:mt-28 mx-4 p-4 text-start text-lg">
         <p className="font-bold text-blue text-xl sm:text-2xl lg:text-4xl">
           A Quick Guide to Get Started Below:
@@ -118,14 +121,17 @@ export function LandingPage() {
               <img
                 src="images/features5.png"
                 alt=""
-                className="rounded-xl lg:w-60"
+                className="rounded-xl lg:w-56"
               />
               <div className="lg:w-56 lg:text-lg">
                 <div className="pb-4">
                   <p className="font-extrabold">Step 5: </p>
                   <p className="font-extrabold">Review or Search for Shifts</p>
                 </div>
-                <p className="sm:text-sm"> Click on the icon on the left to access your shifts record.</p>
+                <p className="sm:text-sm">
+                  {" "}
+                  Click on the icon on the left to access your shifts record.
+                </p>
                 <p className="sm:text-sm pt-2">
                   Shifts are autosaved and organized from newest to oldest. Use
                   the search bar to quickly find a specific shift.
