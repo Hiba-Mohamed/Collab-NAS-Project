@@ -184,10 +184,8 @@ useEffect(() => {
         ) : (
           ""
         )}
-        <div className="sm:pb-6 hidden sm:flex sm:pt-12 flex flex-row items-center gap-20">
-          <p className="sm:text-lg">{currentDateTime}</p>
-
-          <h1 className=" text-2xl flex flex-row gap-2 font-bold sm:text-5xl ">
+        <div className="sm:pb-6 sm:pt-12 flex w-full flex-col items-center justify-between py-6 sm:pl-60 lg:pl-96 sm:flex-row">
+          <h1 className=" text-2xl flex flex-row gap-2 lg:pl-48 font-bold sm:text-3xl lg:text-5xl ">
             <p className="">{hospitalData.hospitalName}</p>
             <Link to="/getStarted">
               {" "}
@@ -196,28 +194,12 @@ useEffect(() => {
           </h1>
           <Link
             to="/addingNewUnit"
-            className="mx-auto hover:border-amber-200 hover:bg-amber-200 hover:text-white text-black font-bold py-2 px-4  sm:mb-2 border-solid border-2 border-orange rounded-sm  sm:px-10 sm:py-1 bo sm:text-sm rounded focus:outline-none focus:shadow-outline bg-orange sm:mb-0 mb-4  items-center justify-center"
+            className="mx-auto hover:bg-primarylight text-white font-bold py-2 px-4  border-solid border-2 border-blue hover:border-primarylight sm:px-10 sm:py-1 bo sm:text-sm rounded focus:outline-none focus:shadow-outline bg-blue sm:mt-0 mt-6"
           >
             + Add Unit
           </Link>
         </div>
-        <div className="sm:pb-6 sm:hidden sm:pt-12 flex flex-col items-center gap-6 pt-12">
-          <h1 className=" text-2xl flex flex-row gap-2 font-bold sm:text-5xl ">
-            <p className="">{hospitalData.hospitalName}</p>
-            <Link to="/getStarted">
-              {" "}
-              <img className="h-6 lg:h-8" src="images/edit-grey.png" />
-            </Link>
-          </h1>
-          <p className="sm:text-lg">{currentDateTime}</p>
 
-          <Link
-            to="/addingNewUnit"
-            className="mx-auto hover:border-amber-200 hover:bg-amber-200 hover:text-white text-black font-bold py-2 px-4  sm:mb-2 border-solid border-2 border-orange rounded-sm  sm:px-10 sm:py-1 bo sm:text-sm rounded focus:outline-none focus:shadow-outline bg-orange sm:mb-0 mb-4  items-center justify-center"
-          >
-            + Add Unit
-          </Link>
-        </div>
 
         <hr className="border-1 border-faint w-full max-w-6xl px-6"></hr>
         <div className="flex flex-col sm:flex-row flex-wrap justify-evenly pb-6">
@@ -248,17 +230,17 @@ useEffect(() => {
                   {" "}
                   <button
                     onClick={() => editUnit(unit.unitName)}
-                    className="mx-auto hover:bg-blue flex flex-row gap-2 items-center  hover:text-white text-blue font-bold sm:pr-10 sm: sm:py-1 sm:text-sm py-2 px-4 sm:px-4 rounded rounded-md focus:outline-none focus:shadow-outline bg-white border-solid border-2 border-blue  sm:mt-0 mt-6"
+                    className="flex flex-row mx-auto gap-2 hover:bg-lightblue text-blue font-bold sm:px-8 sm:py-1 sm:text-sm py-2 px-4 rounded focus:outline-none focus:shadow-outline bg-white border-solid border-2 border-blue  sm:mt-0 mt-6"
                   >
                     <img
-                      src="images/edit-transparent.png"
+                      src="images/edit-blue.png"
                       className="h-4"
                       alt="edit icon"
                     />
                     <p> Edit</p>
                   </button>
                   <button
-                    className="mx-auto hover:bg-lblue hover:text-blue text-white font-bold py-2 px-4  border-solid border-2 border-blue rounded-md hover:border-lblue sm:px-8 sm:py-1 bo sm:text-sm rounded focus:outline-none focus:shadow-outline bg-blue sm:mt-0 mt-6"
+                    className="mx-auto hover:bg-primarylight text-white font-bold py-2 px-4  border-solid border-2 border-blue hover:border-primarylight sm:px-10 sm:py-1 bo sm:text-sm rounded focus:outline-none focus:shadow-outline bg-blue sm:mt-0 mt-6"
                     onClick={() => viewUnit(unit.unitName)}
                   >
                     View

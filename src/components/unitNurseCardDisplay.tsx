@@ -192,15 +192,15 @@ export function UnitNurseCardDisplay({
                   nurses.nurseData.assignedPatient.length !== undefined && (
                     <div className="">
                       <p className="font-bold py-2">
-                        Assigned Patients:{" "}
-                         ({nurses.nurseData.assignedPatient.length})
+                        Assigned Patients: (
+                        {nurses.nurseData.assignedPatient.length})
                       </p>
                       <div className="border border-sky-200 rounded-lg ">
                         <table className="min-w-full divide-y divide-sky-200">
                           <thead className="">
                             <tr className="text-sm sm:text-md bg-sky-100 text-blue text-start">
-                              <th className="px-2 py-1">Room</th>
-                              <th className=" px-2 py-1">Patient</th>
+                              <th className="px-2 py-1 text-start">Room</th>
+                              <th className=" px-2 py-1 text-start">Patient</th>
                             </tr>
                           </thead>
                           <tbody className="divide-sky-200 divide-y">
@@ -229,17 +229,17 @@ export function UnitNurseCardDisplay({
                 {" "}
                 <button
                   type="submit"
-                  className="flex flex-row items-center gap-2 mx-auto hover:bg-red  hover:text-white text-red font-bold  sm:px-1 sm:py-1 sm:text-sm py-1 px-2 sm:px-4 rounded rounded-sm focus:outline-none focus:shadow-outline bg-white border-solid border-2 border-red  sm:mt-0 mt-6"
+                  className="flex flex-row items-center gap-2 mx-auto hover:bg-lightred text-red font-bold  sm:px-1 sm:py-1 sm:text-sm py-1 px-2 sm:px-4 rounded rounded-md focus:outline-none focus:shadow-outline bg-white border-solid border-2 border-red  sm:mt-0 mt-6"
                   onClick={() => deleteNurse(nurses)}
                 >
-                  <img className="h-6 lg:h-4" src="images/delete-icon.png" />
+                  <img className="h-4" src="images/delete-icon.png" />
                   <p className="">Delete</p>
                 </button>
                 <button
-                  className="flex flex-row gap-2 items-center mx-auto hover:bg-lblue hover:text-blue text-white font-bold py-1 sm:px-4 px-4  border-solid border-2 border-blue rounded-sm hover:border-lblue sm:px-10 sm:py-1 bo sm:text-sm rounded focus:outline-none focus:shadow-outline bg-blue sm:mt-0 mt-6"
+                  className="flex flex-row items-center gap-2 mx-auto hover:bg-lightblue text-blue font-bold  sm:px-1 sm:py-1 sm:text-sm py-1 px-2 sm:px-4 rounded rounded-md focus:outline-none focus:shadow-outline bg-white border-solid border-2 border-blue  sm:mt-0 mt-6"
                   onClick={() => editNurse(ShiftId, nurses.nurseId)}
                 >
-                  <img className="h-6 lg:h-4" src="images/edit-blue.png" />
+                  <img className="h-4" src="images/edit-blue.png" />
                   <p> Edit</p>
                 </button>
               </div>

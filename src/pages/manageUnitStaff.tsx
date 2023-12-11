@@ -168,7 +168,13 @@ export function UnitNurseForm() {
       return (
         <div className="font-OpenSans bg-sky-50 sm:max-w-full min-h-screen items-center">
           {showPopup ? (
-            <div className="fixed inset-0 bg-black bg-opacity-50 z-50 flex items-center justify-center p-4 ">
+            <div className="fixed inset-0 bg-black bg-opacity-50 z-50 flex flex-col items-center justify-center p-4 ">
+              <button
+                className="bg-white px-6 py-2 rounded-full m-4 font-bold text-red"
+                onClick={() => setShowPopup(false)}
+              >
+                &#10060;
+              </button>
               <div className="flex flex-col items-center">
                 {" "}
                 <ManageStaffForm
@@ -179,12 +185,6 @@ export function UnitNurseForm() {
                   shiftType={matchingShift.data.shiftType}
                   shiftDate={formatDate(matchingShift.data.shiftDate)}
                 />
-                <button
-                  className="bg-white px-6 py-2 rounded-sm font-bold text-red"
-                  onClick={() => setShowPopup(false)}
-                >
-                  Cancel
-                </button>
                 {errorMessage && (
                   <div className="bg-white sm:px-8 shadow-lg flex flex-col mb-8 sm:flex-row items-center sm:w-80 w-60 max-w-sm rounded-lg max-w-sm  sm:max-w-xl text-xsm p-4 sm:text-sm text-center mx-4">
                     <img
@@ -223,8 +223,8 @@ export function UnitNurseForm() {
                 <p>Shift Overview</p>
               </div>
             </div>
-            <div className="flex flex-col lg:flex-row lg:gap-32  gap-6 text-sm items-center justify-center ">
-              <div className="flex flex-col-reverse gap-6 lg:gap-32 text-lg sm:text-xl lg:flex-row items-center justify-center">
+            <div className="flex flex-col lg:flex-row lg:gap-56  gap-6 text-sm items-center justify-center ">
+              <div className="flex flex-col-reverse gap-6 lg:gap-32 text-lg sm:text-md lg:flex-row items-center justify-center">
                 <p className="flex flex-row gap-2">
                   {" "}
                   {formatDate(matchingShift.data.shiftDate)} |{" "}
@@ -238,7 +238,7 @@ export function UnitNurseForm() {
               </div>
               <button
                 onClick={() => setShowPopup(true)}
-                className="mx-auto hover:border-amber-200 hover:bg-amber-200 hover:text-white text-black font-bold py-2 px-4  border-solid border-2 border-orange rounded-sm  sm:px-10 sm:py-1 bo sm:text-sm rounded focus:outline-none focus:shadow-outline bg-orange sm:mb-0 mb-4  items-center justify-center"
+                className="mx-auto hover:border-blue hover:bg-primarylight text-white font-bold py-2 px-4 rounded-md  sm:px-8 sm:py-2 bo sm:text-sm focus:outline-none focus:shadow-outline bg-blue sm:mb-0 mb-4  items-center justify-center"
               >
                 + Add Nurse
               </button>
@@ -257,7 +257,10 @@ export function UnitNurseForm() {
             className="flex flex-col items-center mt-12 lg:mt-24"
             to={`/viewUnitShift/${unitName}/${ShiftId}`}
           >
-            <button className="mb-12 bg-white hover:bg-blue hover:text-white text-blue border-solid border-2 border-blue font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline">
+            <button className="mb-12 flex flex-row text-blue items-center font-bold">
+              <p className="py-2 mr-2 sm:py-2 px-4 sm:px-3 text-white font-bold sm:text-sm bg-blue rounded-full">
+                &#10004;
+              </p>
               Done
             </button>{" "}
           </Link>

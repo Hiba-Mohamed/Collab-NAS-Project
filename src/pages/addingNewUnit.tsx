@@ -148,6 +148,7 @@ export function NewUnit() {
               <input
                 {...register("unitName", { required: true, maxLength: 50 })}
                 type="text"
+                placeholder="Type your unit's name"
                 className="w-full px-2 appearance-none sm:py-0 py-2 rounded-md border border-blue-300 focus:outline-none focus:ring-2 focus:ring-blue-500 sm:h-10 sm:w-80"
               ></input>
               {errors?.unitName?.type === "required" && (
@@ -163,14 +164,14 @@ export function NewUnit() {
               {" "}
               <Link
                 to="/getStarted"
-                className="mx-auto hover:bg-blue  hover:text-white text-blue font-bold sm:pr-10 sm: sm:py-1 sm:text-sm py-2 px-4 sm:pr-4 rounded focus:outline-none focus:shadow-outline bg-white border-solid border-2 border-blue  sm:mt-0 mt-6"
+                className="mx-auto hover:bg-lightblue text-blue font-bold sm:px-10 sm:py-1 sm:text-sm py-2 px-4 rounded focus:outline-none focus:shadow-outline bg-white border-solid border-2 border-blue  sm:mt-0 mt-6"
               >
                 <span className="pr-2">&#129144;</span>
                 Back
               </Link>
               <button
                 type="submit"
-                className="mx-auto hover:bg-lblue hover:text-blue text-white font-bold py-2 px-4  border-solid border-2 border-blue hover:border-lblue sm:px-10 sm:py-1 bo sm:text-sm rounded focus:outline-none focus:shadow-outline bg-blue sm:mt-0 mt-6"
+                className="mx-auto hover:bg-primarylight text-white font-bold py-2 px-4  border-solid border-2 border-blue hover:border-primarylight sm:px-10 sm:py-1 bo sm:text-sm rounded focus:outline-none focus:shadow-outline bg-blue sm:mt-0 mt-6"
               >
                 Submit
               </button>

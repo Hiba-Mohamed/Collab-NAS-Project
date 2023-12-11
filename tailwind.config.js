@@ -13,7 +13,11 @@ export default {
         orange: "#FBB612",
         red: "#EF4444",
         faint: "#BDBDBD",
-        linecolor:"#666666"
+        linecolor: "#666666",
+        primarylight: "#3891DA",
+        buttongrey: "#C8C8C8",
+        lightblue: "#3996E22E",
+        lightred: "#FEE2E2",
       },
 
       boxShadow: {

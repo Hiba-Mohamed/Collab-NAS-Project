@@ -226,7 +226,7 @@ const UnitShiftForm = (unitName: { unitName: string }) => {
         <div className="flex  items-center">
           {" "}
           <button
-            className="mx-auto hover:bg-lblue hover:text-blue text-white font-bold py-2 px-4  border-solid border-2 border-blue hover:border-lblue sm:px-10 sm:py-1 bo sm:text-sm rounded focus:outline-none focus:shadow-outline bg-blue sm:mt-0 mt-6"
+            className="mx-auto hover:bg-primarylight text-white font-bold py-2 px-4 sm:px-10 sm:py-2 bo sm:text-sm rounded focus:outline-none focus:shadow-outline bg-blue sm:mt-0 mt-6"
             type="submit"
           >
             Next

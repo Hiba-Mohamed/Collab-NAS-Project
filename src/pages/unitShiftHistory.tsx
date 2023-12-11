@@ -106,10 +106,10 @@ export function UnitShiftHistory() {
   }
   if (unitName) {
     return (
-      <div className="bg-slate-100 font-OpenSans min-h-screen text-sm smm:text-md">
+      <div className="bg-sky-50 font-OpenSans min-h-screen text-sm sm:text-md pb-24">
         <div className="">
           <div className="flex flex-col items-center">
-            <h1 className="text-center text-2xl sm:text-4xl font-bold py-8">
+            <h1 className="text-center text-2xl sm:pt-16 sm:text-4xl font-bold py-8">
               Shift Record for {unitName}
             </h1>
 

@@ -158,13 +158,13 @@ export function EditUnit() {
               {" "}
               <Link
                 to="/hospitalView"
-                className="mx-auto hover:bg-blue  hover:text-white text-blue font-bold sm:px-10 sm:py-1 sm:text-sm py-2 px-4 rounded focus:outline-none focus:shadow-outline bg-white border-solid border-2 border-blue  sm:mt-0 mt-6"
+                className="mx-auto hover:bg-lightblue text-blue font-bold sm:px-10 sm:py-1 sm:text-sm py-2 px-4 rounded focus:outline-none focus:shadow-outline bg-white border-solid border-2 border-blue  sm:mt-0 mt-6"
               >
                 Cancel
               </Link>
               <button
                 type="submit"
-                className="mx-auto hover:bg-lblue hover:text-blue text-white font-bold py-2 px-4  border-solid border-2 border-blue hover:border-lblue sm:px-10 sm:py-1 bo sm:text-sm rounded focus:outline-none focus:shadow-outline bg-blue sm:mt-0 mt-6"
+                className="mx-auto hover:bg-primarylight text-white font-bold py-2 px-4  border-solid border-2 border-blue hover:border-primarylight sm:px-10 sm:py-1 bo sm:text-sm rounded focus:outline-none focus:shadow-outline bg-blue sm:mt-0 mt-6"
               >
                 Submit
               </button>
