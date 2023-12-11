@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import { Link } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
 
@@ -110,36 +110,8 @@ function getAllStaffForUnit(unit: IUnitObject): number {
     setShowPopup(true);
     setUnitToDelete(unitName);
   }
-const [currentDateTime, setCurrentDateTime] = useState<string>("");
 
-useEffect(() => {
-  // Function to update the current time and date
-  const updateDateTime = () => {
-    const currentDate = new Date();
-    const options: Intl.DateTimeFormatOptions = {
-      weekday: "long",
-      year: "numeric",
-      month: "long",
-      day: "numeric",
-      hour: "numeric",
-      minute: "numeric",
-      second: "numeric",
-    };
-    const formattedDate = currentDate.toLocaleDateString("en-US", options);
 
-    // Update the state with the formatted date
-    setCurrentDateTime(formattedDate);
-  };
-
-  // Call the function initially
-  updateDateTime();
-
-  // Update the time every second (1000 milliseconds)
-  const intervalId = setInterval(updateDateTime, 1000);
-
-  // Clear the interval when the component unmounts
-  return () => clearInterval(intervalId);
-}, []);
   if (units) {
     return (
       <div className="font-OpenSans flex flex-col items-center min-h-screen pb-24 sm:pb-32 bg-sky-50">
