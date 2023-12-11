@@ -48,9 +48,7 @@ export function Heading() {
           </ul>
         </div>
         <div className="flex flex-row items-center gap-4 hidden md:flex">
-          <Link to="/">
-            <img className="h-4 md:h-6" src="images/settings-icon.png"></img>
-          </Link>
+     
           <Link to="/">
             <img className="h-8 md:h-10" src="images/profile-icon.png"></img>
           </Link>
@@ -93,24 +91,6 @@ export function Heading() {
                 onClick={() => setOpen(!open)}
               >
                 Home
-              </Link>
-            </li>
-            <li>
-              <Link
-                to="/account"
-                className="block font-bold py-2 pl-3 pr-4 text-gray-900 rounded hover:text-sky-600"
-                onClick={() => setOpen(!open)}
-              >
-                Create an Account
-              </Link>
-            </li>
-            <li>
-              <Link
-                to="/login"
-                className="block font-bold py-2 pl-3 pr-4 text-gray-900 rounded hover:text-sky-600"
-                onClick={() => setOpen(!open)}
-              >
-                Login
               </Link>
             </li>
             <li>
