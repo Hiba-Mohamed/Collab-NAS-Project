@@ -22,17 +22,14 @@ import StartStaff from "./pages/addNurse";
 
 function App() {
   return (
-    <div className="App">
+    <div className="App font-OpenSans font-normal">
       <Heading />
       <Routes>
         <Route path="/addingNewUnit" element={<NewUnit />} />
         <Route path="/hospitalView" element={<HospitalView />} />
         <Route path="getStarted" element={<GetStarted />} />
         <Route path="/" element={<LandingPage />} />
-        <Route
-          path="/addNurse/:unitName/:ShiftId"
-          element={<StartStaff />}
-        />
+        <Route path="/addNurse/:unitName/:ShiftId" element={<StartStaff />} />
         <Route path="/editUnitName/:unitName" element={<EditUnit />} />
         <Route
           path="/editShiftInfo/:unitName/:ShiftId"
