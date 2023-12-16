@@ -397,7 +397,7 @@ export const NurseInfoForm = ({
                     className="mx-auto hover:bg-blue  hover:text-white text-blue font-bold sm:pr-10 sm: sm:py-1 sm:text-sm py-2 px-4 sm:px-4 rounded rounded-sm focus:outline-none focus:shadow-outline bg-white border-solid border-2 border-blue  sm:mt-0 mt-6"
                   >
                     <span className="pr-2">&#129144;</span>
-                    Back
+                    <p> Back</p>
                   </Link>
                   <button
                     type="submit"

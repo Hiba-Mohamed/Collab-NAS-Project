@@ -3,7 +3,7 @@ export default {
   content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
   theme: {
     extend: {
-      width: { 500: "500px" },
+      width: { 500: "500px", 600: "600px" },
       colors: {
         peach: "#EF798A",
         blue: "#0654A0",
@@ -17,6 +17,7 @@ export default {
         primarylight: "#3891DA",
         buttongrey: "#C8C8C8",
         lightblue: "#3996E22E",
+        bluehover: "#3996E2",
         lightred: "#FEE2E2",
       },
 
