@@ -110,10 +110,10 @@ export function AboutPage() {
           </div>
         </div>
       </div>
-      <div className="flex flex-col sm:flex-row p-4">
+      <div className="flex flex-col sm:flex-row p-4 sm:pl-0">
         <img
           src="images/about2.png"
-          className="h-full pb-4"
+          className="h-full pb-4 "
           alt="a picture of a nurse working on a computer"
         />
         <div>
