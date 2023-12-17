@@ -136,6 +136,14 @@ export function NewUnit() {
       </div>
       <div className="flex flex-col items-center justify-center">
         <div className="flex flex-col items-center justify-center">
+          {duplicateError ? (
+            <div className="bg-white sm:px-8 shadow-lg flex flex-col sm:flex-row items-center sm:w-80 w-60 max-w-sm rounded-lg max-w-sm  sm:max-w-xl text-xsm p-4 sm:text-sm text-center mx-4">
+              <img className="w-20 sm:w-16" src="images/danger-icon.png" />
+              <p className="text-peach ">{duplicateError}</p>
+            </div>
+          ) : (
+            ""
+          )}
           <form
             onSubmit={handleSubmit(onSubmit)}
             className="p-12 sm:p-6 justify-center sm:gap-2 flex flex-col bg-white m-4 shadow-lg rounded-xl sm:max-w-4xl"
@@ -177,13 +185,6 @@ export function NewUnit() {
               </button>
             </div>
           </form>{" "}
-          {duplicateError ? (
-            <div className="bg-white sm:px-8 max-w-sm  sm:max-w-xl text-xsm p-4 sm:text-md text-sm text-center mx-4 my-2">
-              <p className="text-peach ">{duplicateError}</p>
-            </div>
-          ) : (
-            ""
-          )}
         </div>
       </div>
     </div>
