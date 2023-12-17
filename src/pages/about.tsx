@@ -1,10 +1,10 @@
 export function AboutPage() {
   return (
     <div className="bg-sky-50">
-      <div className="flex flex-col items-center sm:flex-row gap-4">
+      <div className="flex flex-col lg:items-center lg:flex-row gap-4">
         <img
           src="images/about1.png"
-          className="w-600"
+          className="w-500 lg:w-600"
           alt="a picture of two nurses"
         />
         <div className="sm:pr-20 p-4 flex flex-col gap-4">
@@ -16,7 +16,7 @@ export function AboutPage() {
             This tool is an electronic document that replaces the paper based
             nurses assignment sheet used in some healthcare settings.
           </h2>
-          <h3>
+          <h3 className="text-lg sm:text-xl sm:pb-6">
             {" "}
             The NAS provides nurses with clear patient assignments and outlines
             their expected duties. Additionally, the NAS enables efficient
@@ -37,7 +37,7 @@ export function AboutPage() {
             to:
           </p>
         </div>
-        <div className="flex flex-col sm:flex-row sm:pl-16 pl-4 gap-12 pb-12 sm:pb-24">
+        <div className="flex flex-col sm:flex-row sm:pl-16 pl-4 gap-12 pb-12 sm:pb-24 md:px-24">
           <div className="flex flex-col gap-2 sm:gap-4">
             <img
               src="images/efficiencyIcon.png"
@@ -72,7 +72,7 @@ export function AboutPage() {
             </p>
           </div>
         </div>
-        <div className="flex flex-col sm:flex-row sm:pl-16 pl-4 gap-12 pb-12 sm:pb-24">
+        <div className="flex flex-col sm:flex-row sm:pl-16 pl-4 gap-12 pb-12 sm:pb-24 md:px-24">
           <div className="flex flex-col gap-2 sm:gap-4">
             <img
               src="images/reportingIcon.png"
@@ -110,13 +110,13 @@ export function AboutPage() {
           </div>
         </div>
       </div>
-      <div className="flex flex-col sm:flex-row p-4 sm:pl-0">
+      <div className="flex flex-col lg:items-center lg:flex-row sm:pl-0">
         <img
           src="images/about2.png"
-          className="h-full pb-4 "
+          className="w-500 lg:w-600 pb-4 "
           alt="a picture of a nurse working on a computer"
         />
-        <div>
+        <div className="pl-6 pb-12">
           <h1 className="text-blue sm:text-3xl text-xl font-semibold sm:pb-6 sm:pl-16 pb-4">
             The unique features of the NAS:
           </h1>
@@ -131,7 +131,7 @@ export function AboutPage() {
             involved in patient care, preventing unauthorized individuals from
             tampering with or accessing sensitive information.
           </p>
-          <hr className="bg-orange max-w-xl flex sm:ml-12 mb-12 mx-4"></hr>
+          <hr className="bg-orange max-w-xl sm:max-w-5xl flex sm:ml-12 mb-12 mx-4 py-0.5 md:w-5xl"></hr>
 
           <h2 className="sm:pb-6 sm:pl-16 text-blue text-lg sm:text-2xl font-semibold">
             Creating Electronic Sheets for Future Dates{" "}
@@ -145,7 +145,7 @@ export function AboutPage() {
             eliminating the need for manual data entries and ensuring the
             information is up-to-date and accurate.
           </p>
-          <hr className="bg-orange max-w-xl flex sm:ml-12 mb-12 mx-4"></hr>
+          <hr className="bg-orange max-w-xl sm:max-w-5xl flex sm:ml-12 mb-12 mx-4 py-0.5 md:w-5xl"></hr>
           <h2 className="sm:pb-6 sm:pl-16 text-blue text-lg sm:text-2xl font-semibold">
             Duplication Safeguards
           </h2>
