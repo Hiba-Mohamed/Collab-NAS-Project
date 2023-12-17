@@ -168,7 +168,7 @@ export function LandingPage() {
           guest and explore the tool!
         </p>
         <Link
-          to="/home"
+          to="/getStarted"
           className="bg-blue lg:text-lg hover:bg-sky-500 text-white font-bold py-2 px-10 rounded-lg mb-12 focus:outline-none focus:shadow-outline"
         >
           {" "}

@@ -154,7 +154,8 @@ export const UnitShiftListComponent = (unitName: { unitName: string }) => {
                 <p className="text-xl font-bold mb-4">Are you sure?</p>
                 <p className="text-lg mb-4 text-center">
                   This action cannot be undone. Only click confirm if you are
-                  certain you would like to delete this nurse
+                  certain you would like to delete this shift in unit{" "}
+                  <strong>{unitNameString}</strong>
                 </p>
                 <div className="flex flex-col items-start w-full px-4 text-lg">
                   {" "}
