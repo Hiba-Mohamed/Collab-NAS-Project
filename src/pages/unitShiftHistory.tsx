@@ -159,7 +159,7 @@ export function UnitShiftHistory() {
                     )}
                   </div>{" "}
                   <button
-                    className="mx-2 flex items-center justify-center bg-blue hover:bg-primarylight py-2 px-4 text-white font-semibold rounded-md hover:shadow-lg transition duration-3000 cursor-pointer text-center"
+                    className="mx-2 flex items-center justify-center bg-blue hover:bg-primarylight py-2 px-8 text-white font-semibold rounded-md hover:shadow-lg transition duration-3000 cursor-pointer text-center"
                     type="submit"
                   >
                     Search

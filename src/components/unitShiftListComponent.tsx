@@ -141,7 +141,7 @@ export const UnitShiftListComponent = (unitName: { unitName: string }) => {
 
   if (shifts?.length !== 0) {
     return (
-      <div className="flex flex-col md:flex-col items-center max-w-sm sm:max-w-2xl">
+      <div className="flex flex-col md:flex-col items-center max-w-sm sm:max-w-full">
         {showPopup && shiftToDelete ? (
           <div className="fixed inset-0 bg-black bg-opacity-50 z-50 flex items-center justify-center p-4 ">
             <div className="bg-white p-8 rounded-lg max-w-sm sm:max-w-lg">
@@ -192,41 +192,82 @@ export const UnitShiftListComponent = (unitName: { unitName: string }) => {
         ) : (
           ""
         )}
-        <div className="flex flex-col lg:flex-col text-sm ms:text-md md:flex-col items-center max-w- sm:max-w-2xl">
+        <div className="hidden  w-full md:flex  flex-row text-blue font-bold text-lg  w-800">
+          <p className="px-12">Date</p>
+          <p className="pl-44">Shift Type</p>
+          <p className="pl-48">Actions</p>
+        </div>
+        <div className="flex flex-col lg:flex-col text-sm sm:text-md md:flex-col items-center ">
           {existingData?.map((existingData: IUnitShiftObject) => (
-            <div
-              className="sm:my-4 mx-2 sm:p-4 my-4 p-4 gap-2 flex sm:flex-row items-center bg-white rounded-xl shadow-lg hover:shadow-xl hover:scale-105 transition duration-300 md:duration-500"
-              key={existingData.shiftId}
-            >
-              <div className="flex flex-col bg-sky-50 text-black shadow-inner font-bold rounded-md">
-                <div className="p-2 text-lg w-40 text-center">
+            <div className="flex flex-col items-center">
+              <div
+                className="hidden md:flex w-800 sm:my-4  p-4 justify-between flex-row items-center bg-white rounded-xl shadow-lg hover:shadow-xl hover:scale-105 transition duration-300 md:duration-500"
+                key={existingData.shiftId}
+              >
+                <div className="p-2 text-md font-semibold w-40 text-center">
                   {formatDate(existingData.data.shiftDate)}
                 </div>
-                <div className="p-2 text-lg w-40 text-center">
+                <div className="p-2 text-md font-semibold w-40 text-center">
                   {existingData.data.shiftType}
+                </div>
+
+                <div className="flex sm:gap-4 gap-1 flex-row items-center">
+                  {" "}
+                  <button
+                    className="bg-blue font-semibold text-white w-20 h-9 rounded"
+                    onClick={() => viewShift(existingData.shiftId)}
+                  >
+                    View
+                  </button>
+                  <button
+                    className="bg-white text-blue font-bold w-20 h-9 rounded border-solid border-blue border-2"
+                    onClick={() => editShift(existingData.shiftId)}
+                  >
+                    Edit
+                  </button>
+                  <button
+                    className="bg-white text-red font-bold w-20 h-9 rounded border-solid border-red border-2"
+                    onClick={() => deleteShift(existingData)}
+                  >
+                    Delete
+                  </button>
                 </div>
               </div>
 
-              <div className="flex flex-col sm:gap-8 sm: px-8 gap-1 sm:flex-row items-center justify-evenly">
-                {" "}
-                <button
-                  className="mx-auto hover:border-blue hover:bg-primarylight text-white font-bold py-2 px-4 rounded-md  sm:px-8 sm:py-2 bo sm:text-sm focus:outline-none focus:shadow-outline bg-blue sm:mb-0 mb-4  items-center justify-center"
-                  onClick={() => viewShift(existingData.shiftId)}
-                >
-                  View
-                </button>
-                <button
-                  className="mx-auto hover:border-blue hover:bg-lightblue text-blue font-bold py-2 px-4 rounded-md  sm:px-8 sm:py-2 bo sm:text-sm focus:outline-none focus:shadow-outline bg-white border-2 border-solid border-blue sm:mb-0 mb-4  items-center justify-center"
-                  onClick={() => editShift(existingData.shiftId)}
-                >
-                  Edit
-                </button>
-                <button
-                  className="mx-auto  hover:bg-lightred text-red font-bold py-2 px-4 rounded-md  sm:px-8 sm:py-2 bo sm:text-sm focus:outline-none focus:shadow-outline bg-white border-2 border-solid border-red sm:mb-0 mb-4  items-center justify-center"
-                  onClick={() => deleteShift(existingData)}
-                >
-                  Delete
-                </button>
+              <div
+                className="flex md:hidden sm:my-4 mx-2 sm:p-4 my-4 p-4 gap-2 sm:flex-row items-center bg-white rounded-xl shadow-lg hover:shadow-xl hover:scale-105 transition duration-300 md:duration-500"
+                key={existingData.shiftId}
+              >
+                <div className="flex flex-col bg-sky-50 text-black shadow-inner font-bold rounded-md">
+                  <div className="p-2 text-lg w-40 text-center">
+                    {formatDate(existingData.data.shiftDate)}
+                  </div>
+                  <div className="p-2 text-lg w-40 text-center">
+                    {existingData.data.shiftType}
+                  </div>
+                </div>
+
+                <div className="flex flex-col sm:gap-8 sm: px-8 gap-1 sm:flex-row items-center justify-evenly">
+                  {" "}
+                  <button
+                    className="mx-auto hover:border-blue hover:bg-primarylight text-white font-bold py-2 px-4 rounded-md  sm:px-8 sm:py-2 bo sm:text-sm focus:outline-none focus:shadow-outline bg-blue sm:mb-0 mb-4  items-center justify-center"
+                    onClick={() => viewShift(existingData.shiftId)}
+                  >
+                    View
+                  </button>
+                  <button
+                    className="mx-auto hover:border-blue hover:bg-lightblue text-blue font-bold py-2 px-4 rounded-md  sm:px-8 sm:py-2 bo sm:text-sm focus:outline-none focus:shadow-outline bg-white border-2 border-solid border-blue sm:mb-0 mb-4  items-center justify-center"
+                    onClick={() => editShift(existingData.shiftId)}
+                  >
+                    Edit
+                  </button>
+                  <button
+                    className="mx-auto  hover:bg-lightred text-red font-bold py-2 px-4 rounded-md  sm:px-8 sm:py-2 bo sm:text-sm focus:outline-none focus:shadow-outline bg-white border-2 border-solid border-red sm:mb-0 mb-4  items-center justify-center"
+                    onClick={() => deleteShift(existingData)}
+                  >
+                    Delete
+                  </button>
+                </div>
               </div>
             </div>
           ))}
