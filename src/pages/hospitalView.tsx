@@ -202,13 +202,9 @@ function getAllStaffForUnit(unit: IUnitObject): number {
                   {" "}
                   <button
                     onClick={() => editUnit(unit.unitName)}
-                    className="flex flex-row mx-auto gap-2 hover:bg-lightblue text-blue font-bold sm:px-8 sm:py-1 sm:text-sm py-2 px-4 rounded focus:outline-none focus:shadow-outline bg-white border-solid border-2 border-blue  sm:mt-0 mt-6"
+                    className="flex flex-row mx-auto hover:bg-lightblue text-blue font-bold sm:px-10 sm:py-1 sm:text-sm py-2 px-6 rounded focus:outline-none focus:shadow-outline bg-white border-solid border-2 border-blue  sm:mt-0 mt-6"
                   >
-                    <img
-                      src="images/edit-blue.png"
-                      className="h-4"
-                      alt="edit icon"
-                    />
+                  
                     <p> Edit</p>
                   </button>
                   <button

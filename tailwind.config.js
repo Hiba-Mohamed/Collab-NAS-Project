@@ -4,6 +4,7 @@ export default {
   theme: {
     extend: {
       width: { 500: "500px", 600: "600px", 700: "700px", 800: "800px" },
+      height:{1:"1px", 2:"2px", 1.5:"1.5px"},
       colors: {
         peach: "#EF798A",
         blue: "#0654A0",

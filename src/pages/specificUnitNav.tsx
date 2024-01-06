@@ -14,7 +14,7 @@ export default function SpecificUnitNav() {
         </h2>
       </div>
       <div className="flex flex-col lg:flex-row flex-wrap justify-evenly sm:py-10 pb-10 gap-4">
-        <div className="hover:border-bluehover hover:border-2 flex rounded-lg bg-white  flex-row  px-6 shadow-lg text-start max-w-xl m-2 py-3 border-2 border-white w-80 sm:w-500">
+        <div className="hover:border-bluehover hover:border-2 flex rounded-lg bg-white  flex-row  px-6 shadow-lg text-start max-w-xl m-2 py-8 border-2 border-white w-80 sm:w-500">
           <Link
             to={`/startUnitShift/${unitName}`}
             className="flex  items-center flex-row-reverse justify-between gap-2 sm:gap-18"
@@ -29,13 +29,13 @@ export default function SpecificUnitNav() {
             </p>
           </Link>
         </div>
-        <div className="hover:border-bluehover hover:border-2 flex flex-col rounded-lg bg-white flex flex-row items-start px-6 shadow-lg text-start max-w-xl m-2 py-3 border-2 border-white w-80 sm:w-500">
+        <div className="hover:border-bluehover hover:border-2 flex flex-col rounded-lg bg-white flex flex-row items-start px-6 shadow-lg text-start max-w-xl m-2 py-8 border-2 border-white w-80 sm:w-500">
           <Link
             to={`/unitShiftHistory/${unitName}`}
             className="flex items-center flex-row-reverse justify-evenly gap-2"
           >
             <img
-              className="sm:w-48 w-32 rounded-lg "
+              className="sm:w-48 w-32 rounded-lg mr-4"
               src="images/computer-right.png"
               alt=""
             />

@@ -27,7 +27,7 @@ export function AboutPage() {
         </div>
       </div>
 
-      <div className="font-OpenSans flex flex-col items-start mb-48 p-4 mt-12">
+      <div className="font-OpenSans flex flex-col items-start mb-24 p-4 mt-12">
         <div className="flex flex-col gap-2">
           <h3 className="text-blue sm:text-3xl text-xl font-semibold sm:pb-6 sm:pl-16">
             Why Use the NAS?
@@ -37,7 +37,7 @@ export function AboutPage() {
             to:
           </p>
         </div>
-        <div className="flex flex-col sm:flex-row sm:pl-16 pl-4 gap-12 pb-12 sm:pb-24 md:px-24">
+        <div className="flex flex-col sm:flex-row  gap-12 pb-12 sm:pb-24 md:px-20">
           <div className="flex flex-col gap-2 sm:gap-4">
             <img
               src="images/efficiencyIcon.png"
@@ -62,7 +62,7 @@ export function AboutPage() {
             <h3 className="sm:text-2xl text-blue font-semibold">
               Error Reduction:
             </h3>
-            <p className="max-w-3xl pr-12 sm:pr-24">
+            <p className="max-w-3xl pr-12 sm:pr-20">
               {" "}
               Electronic nurses' assignment sheets contribute to a reduction in
               errors compared to their paper-based counterparts. With electronic
@@ -72,7 +72,7 @@ export function AboutPage() {
             </p>
           </div>
         </div>
-        <div className="flex flex-col sm:flex-row sm:pl-16 pl-4 gap-12 pb-12 sm:pb-24 md:px-24">
+        <div className="flex flex-col sm:flex-row sm:pl-16 pl-4 gap-12 pb-12 sm:pb-24 md:px-20">
           <div className="flex flex-col gap-2 sm:gap-4">
             <img
               src="images/reportingIcon.png"
@@ -113,17 +113,17 @@ export function AboutPage() {
       <div className="flex flex-col lg:items-center lg:flex-row sm:pl-0">
         <img
           src="images/about2.png"
-          className="w-500 lg:w-600 pb-4 "
+          className="w-500 lg:w-700 pb-4 "
           alt="a picture of a nurse working on a computer"
         />
         <div className="pl-6 pb-12">
           <h1 className="text-blue sm:text-3xl text-xl font-semibold sm:pb-6 sm:pl-16 pb-4">
-            The unique features of the NAS:
+            The Unique Features of the NAS:
           </h1>
           <h2 className="sm:pb-6 sm:pl-16 text-blue text-lg sm:text-2xl font-semibold">
             Regulated Access
           </h2>
-          <p className="sm:pb-6 sm:pl-16 pr-12 sm:pr-24 pb-4">
+          <p className="sm:pb-6 sm:pl-16 pr-12 sm:pr-24">
             {" "}
             Electronic nurses' assignment sheets offer regulated access,
             ensuring that only authorized users can view and make changes to the
@@ -131,7 +131,7 @@ export function AboutPage() {
             involved in patient care, preventing unauthorized individuals from
             tampering with or accessing sensitive information.
           </p>
-          <hr className="bg-orange max-w-xl sm:max-w-5xl flex sm:ml-12 mb-12 mx-4 py-0.5 md:w-5xl"></hr>
+          <hr className="bg-orange max-w-xl sm:max-w-5xl flex sm:ml-12 mb-12 mx-4 h-1.5 md:max-w-5xl"></hr>
 
           <h2 className="sm:pb-6 sm:pl-16 text-blue text-lg sm:text-2xl font-semibold">
             Creating Electronic Sheets for Future Dates{" "}
@@ -145,7 +145,7 @@ export function AboutPage() {
             eliminating the need for manual data entries and ensuring the
             information is up-to-date and accurate.
           </p>
-          <hr className="bg-orange max-w-xl sm:max-w-5xl flex sm:ml-12 mb-12 mx-4 py-0.5 md:w-5xl"></hr>
+          <hr className="bg-orange max-w-xl sm:max-w-5xl flex sm:ml-12 mb-12 mx-4 h-2 md:max-w-5xl"></hr>
           <h2 className="sm:pb-6 sm:pl-16 text-blue text-lg sm:text-2xl font-semibold">
             Duplication Safeguards
           </h2>

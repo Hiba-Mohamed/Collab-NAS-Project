@@ -6,6 +6,9 @@ export function Footer() {
         <p className="block text-center text-blue font-bold">
           Created by Hiba Mohamed using Vite, Node.js, and Canva
         </p>
+        <p className="block text-center text-blue font-bold">
+          UI/UX designed by Julian Apostol
+        </p>
         <p className="block text-center">
           <strong>Disclaimer:</strong> Used pictures from Canva{" "}
         </p>
