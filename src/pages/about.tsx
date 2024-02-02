@@ -117,35 +117,38 @@ export function AboutPage() {
           alt="a picture of a nurse working on a computer"
         />
         <div className="pl-6 pb-12">
-          <h1 className="text-blue sm:text-3xl text-xl font-semibold sm:pb-6 sm:pl-16 pb-4">
-            The Unique Features of the NAS:
-          </h1>
-          <h2 className="sm:pb-6 sm:pl-16 text-blue text-lg sm:text-2xl font-semibold">
-            Regulated Access
-          </h2>
-          <p className="sm:pb-6 sm:pl-16 pr-12 sm:pr-24">
-            {" "}
-            Electronic nurses' assignment sheets offer regulated access,
-            ensuring that only authorized users can view and make changes to the
-            document. Access can be restricted to healthcare professionals
-            involved in patient care, preventing unauthorized individuals from
-            tampering with or accessing sensitive information.
-          </p>
-          <hr className="bg-orange max-w-xl sm:max-w-5xl flex sm:ml-12 mb-12 mx-4 h-1.5 md:max-w-5xl"></hr>
-
-          <h2 className="sm:pb-6 sm:pl-16 text-blue text-lg sm:text-2xl font-semibold">
-            Creating Electronic Sheets for Future Dates{" "}
-          </h2>
-          <p className="sm:pb-6 sm:pl-16 pr-12 sm:pr-24 pb-4">
-            {" "}
-            With the NAS, healthcare professionals can effortlessly generate
-            electronic sheets for future dates, enabling them to plan and
-            organize patient information in advance. This powerful feature
-            streamlines the process of preparing for upcoming shifts,
-            eliminating the need for manual data entries and ensuring the
-            information is up-to-date and accurate.
-          </p>
-          <hr className="bg-orange max-w-xl sm:max-w-5xl flex sm:ml-12 mb-12 mx-4 h-2 md:max-w-5xl"></hr>
+          <div>
+            <h1 className="text-blue sm:text-3xl text-xl font-semibold sm:pb-6 sm:pl-16 pb-4">
+              The Unique Features of the NAS:
+            </h1>
+            <h2 className="sm:pb-6 sm:pl-16 text-blue text-lg sm:text-2xl font-semibold">
+              Regulated Access
+            </h2>
+            <p className="sm:pb-6 sm:pl-16 pr-12 sm:pr-24 pb-4">
+              {" "}
+              Electronic nurses' assignment sheets offer regulated access,
+              ensuring that only authorized users can view and make changes to
+              the document. Access can be restricted to healthcare professionals
+              involved in patient care, preventing unauthorized individuals from
+              tampering with or accessing sensitive information.
+            </p>
+          </div>
+          <hr className="bg-orange w-80 h-1 sm:w-600 sm:ml-16 mb-8"></hr>
+          <div>
+            <h2 className="sm:pb-6 sm:pl-16 text-blue text-lg sm:text-2xl font-semibold">
+              Creating Electronic Sheets for Future Dates{" "}
+            </h2>
+            <p className="sm:pb-6 sm:pl-16 pr-12 sm:pr-24 pb-4">
+              {" "}
+              With the NAS, healthcare professionals can effortlessly generate
+              electronic sheets for future dates, enabling them to plan and
+              organize patient information in advance. This powerful feature
+              streamlines the process of preparing for upcoming shifts,
+              eliminating the need for manual data entries and ensuring the
+              information is up-to-date and accurate.
+            </p>
+          </div>
+          <hr className="bg-orange w-80 h-1.5 sm:w-600 sm:ml-16 mb-8"></hr>
           <h2 className="sm:pb-6 sm:pl-16 text-blue text-lg sm:text-2xl font-semibold">
             Duplication Safeguards
           </h2>
