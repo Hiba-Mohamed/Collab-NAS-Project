@@ -7,7 +7,7 @@ export function AboutPage() {
           className="w-500 lg:w-600"
           alt="a picture of two nurses"
         />
-        <div className="sm:pr-20 p-4 flex flex-col gap-4">
+        <div className="sm:pr-20 p-4 flex flex-col gap-4 pl-6">
           <h1 className="text-blue sm:text-3xl lg:text-4xl text-xl font-semibold sm:pb-6">
             {" "}
             What is the NAS (Nurses Assignment Sheet)?
@@ -37,7 +37,7 @@ export function AboutPage() {
             to:
           </p>
         </div>
-        <div className="flex flex-col sm:flex-row  gap-12 pb-12 sm:pb-24 md:px-20">
+        <div className="flex flex-col sm:flex-row sm:pl-16 pl-4 gap-12 pb-12 sm:pb-24 md:px-20">
           <div className="flex flex-col gap-2 sm:gap-4">
             <img
               src="images/efficiencyIcon.png"
@@ -116,12 +116,12 @@ export function AboutPage() {
           className="w-500 lg:w-700 pb-4 "
           alt="a picture of a nurse working on a computer"
         />
-        <div className="pl-6 pb-12">
+        <div className="pb-12 pl-4 sm:pl-0">
           <div>
             <h1 className="text-blue sm:text-3xl text-xl font-semibold sm:pb-6 sm:pl-16 pb-4">
               The Unique Features of the NAS:
             </h1>
-            <h2 className="sm:pb-6 sm:pl-16 text-blue text-lg sm:text-2xl font-semibold">
+            <h2 className="sm:pb-6 sm:pl-16 text-blue text-lg sm:text-2xl pb-2 font-semibold">
               Regulated Access
             </h2>
             <p className="sm:pb-6 sm:pl-16 pr-12 sm:pr-24 pb-4">
@@ -133,9 +133,9 @@ export function AboutPage() {
               tampering with or accessing sensitive information.
             </p>
           </div>
-          <hr className="bg-orange w-80 h-1 sm:w-600 sm:ml-16 mb-8"></hr>
+          <hr className="bg-orange w-80 h-1 sm:w-500 mb-8 sm:h-1.5 sm:ml-16"></hr>
           <div>
-            <h2 className="sm:pb-6 sm:pl-16 text-blue text-lg sm:text-2xl font-semibold">
+            <h2 className="sm:pb-6 sm:pl-16 text-blue text-lg sm:text-2xl pb-2 font-semibold">
               Creating Electronic Sheets for Future Dates{" "}
             </h2>
             <p className="sm:pb-6 sm:pl-16 pr-12 sm:pr-24 pb-4">
@@ -148,8 +148,8 @@ export function AboutPage() {
               information is up-to-date and accurate.
             </p>
           </div>
-          <hr className="bg-orange w-80 h-1.5 sm:w-600 sm:ml-16 mb-8"></hr>
-          <h2 className="sm:pb-6 sm:pl-16 text-blue text-lg sm:text-2xl font-semibold">
+          <hr className="bg-orange w-80 h-1.5 sm:w-500 sm:h-1.5 mb-8 sm:ml-16"></hr>
+          <h2 className="sm:pb-6 sm:pl-16 text-blue text-lg sm:text-2xl pb-2 font-semibold">
             Duplication Safeguards
           </h2>
           <p className="sm:pb-6 sm:pl-16 pr-12 sm:pr-24">
