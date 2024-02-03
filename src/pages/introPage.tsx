@@ -36,7 +36,7 @@ export function LandingPage() {
           <div className="flex flex-col rounded-lg bg-white flex flex-row items-start px-6 shadow-lg text-start m-2 py-4">
             <div className="flex flex-col gap-2">
               <div className="pb-4 w-300 sm:w-400">
-                <p className="font-extrabold">
+                <p className="font-extrabold text-lg sm:text-2xl">
                   Step 1: Create Hospital Profile
                 </p>
                 <p className="">
@@ -54,7 +54,7 @@ export function LandingPage() {
           <div className="flex flex-col rounded-lg bg-white flex flex-row items-start px-6 shadow-lg text-start m-2 py-4">
             <div className="flex flex-col gap-2">
               <div className="pb-4 w-300 sm:w-400">
-                <p className="font-extrabold">
+                <p className="font-extrabold text-lg sm:text-2xl">
                   Step 2: Create New Unit profile
                 </p>
                 <p className="">Type your new hospital units's name.</p>
@@ -71,7 +71,9 @@ export function LandingPage() {
           <div className="flex flex-col rounded-lg bg-white flex flex-row items-start px-6 shadow-lg text-start m-2 py-4">
             <div className="flex flex-col gap-2">
               <div className="pb-4 w-300 sm:w-400">
-                <p className="font-extrabold">Step 3: Create New Shifts</p>
+                <p className="font-extrabold text-lg sm:text-2xl">
+                  Step 3: Create New Shifts
+                </p>
                 <p className="">
                   Click on the icon on the left to start creating shifts for the
                   unit.
@@ -88,7 +90,7 @@ export function LandingPage() {
           <div className="flex flex-col rounded-lg bg-white flex flex-row items-start px-6 shadow-lg text-start m-2 py-4">
             <div className="flex flex-col gap-2">
               <div className="pb-4 w-300 sm:w-400">
-                <p className="font-extrabold">
+                <p className="font-extrabold text-lg sm:text-2xl">
                   Step 4: Manage Shifts Assignments
                 </p>
                 <p className="">
@@ -108,7 +110,7 @@ export function LandingPage() {
           <div className="flex flex-col rounded-lg bg-white flex flex-row items-start px-6 shadow-lg text-start m-2 py-4">
             <div className="flex flex-col gap-2">
               <div className="pb-4 w-300 sm:w-400">
-                <p className="font-extrabold">
+                <p className="font-extrabold text-lg sm:text-2xl">
                   Step 5: Review or Search for Shifts
                 </p>
                 <p className="">
@@ -129,7 +131,7 @@ export function LandingPage() {
           <div className="flex flex-col rounded-lg bg-white flex flex-row items-start px-6 shadow-lg text-start m-2 py-4">
             <div className="flex flex-col gap-2">
               <div className="pb-4 w-300 sm:w-400">
-                <p className="font-extrabold">
+                <p className="font-extrabold text-lg sm:text-2xl">
                   Step 6: Review Hospital Profile
                 </p>
                 <p className="">
