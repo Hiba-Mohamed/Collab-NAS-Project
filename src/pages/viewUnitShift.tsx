@@ -98,12 +98,13 @@ export function ViewUnitShift() {
       if (matchingShift) {
         return (
           <div className="font-OpenSans bg-sky-50 sm:max-w-full min-h-screen items-center pb-24">
-            <div className="flex flex-col-reverse gap-6 lg:gap-32 text-lg py-8 sm:text-xl lg:flex-row items-center justify-center">
+            <div className="flex flex-col gap-6 lg:gap-32 text-lg py-8 sm:text-xl lg:flex-row items-center justify-center">
+              <p className="sm:text-3xl text-2xl font-bold lg:hidden">{unitName} Unit</p>
               <p className="flex flex-row gap-2">
                 {" "}
                 {formatDate(matchingShift.data.shiftDate)}
               </p>
-              <p className="sm:text-3xl font-bold">{unitName} Unit</p>
+              <p className="sm:text-3xl font-bold hidden lg:flex">{unitName} Unit</p>
               <p>{matchingShift.data.shiftType}</p>
             </div>
 
@@ -113,7 +114,14 @@ export function ViewUnitShift() {
               {" "}
               <ViewNurseCard staffData={staffData} />{" "}
             </div>
-            <Link className="flex flex-col items-center mt-12 lg:mt-24" to={`/manageUnitStaff/${unitName}/${ShiftId}`}><img src="images/edit-grey.png" alt="edit icon" className="h-12" /></Link>
+            <Link
+              className="flex flex-row gap-2 text-blue w-full justify-end px-12 mt-12 lg:mt-24"
+              to={`/manageUnitStaff/${unitName}/${ShiftId}`}
+            >
+              {" "}
+              Edit This Shift
+              <img src="images/arrow.png" alt="edit icon" className="h-6" />
+            </Link>
           </div>
         );
       }

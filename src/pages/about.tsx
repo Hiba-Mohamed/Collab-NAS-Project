@@ -113,7 +113,7 @@ export function AboutPage() {
       <div className="flex flex-col lg:items-center lg:flex-row sm:pl-0">
         <img
           src="images/about2.png"
-          className="w-500 lg:w-700 pb-4 "
+          className="w-500 lg:w-600 pb-4 "
           alt="a picture of a nurse working on a computer"
         />
         <div className="pb-12 pl-4 sm:pl-0">

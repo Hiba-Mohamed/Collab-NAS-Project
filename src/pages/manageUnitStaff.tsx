@@ -253,16 +253,13 @@ export function UnitNurseForm() {
               staffData={matchingShift.staff}
             />{" "}
           </div>
+  
           <Link
-            className="flex flex-col items-center mt-12 lg:mt-24"
+            className="flex flex-row gap-2 text-blue w-full justify-end px-12 mt-12 lg:mt-24"
             to={`/viewUnitShift/${unitName}/${ShiftId}`}
           >
-            <button className="mb-12 flex flex-row text-blue items-center font-bold">
-              <p className="py-2 mr-2 sm:py-2 px-4 sm:px-3 text-white font-bold sm:text-sm bg-blue rounded-full">
-                &#10004;
-              </p>
-              Done
-            </button>{" "}
+              Go to Shift View Only Screen
+              <img src="images/arrow.png" alt="edit icon" className="h-6" />
           </Link>
         </div>
       );
