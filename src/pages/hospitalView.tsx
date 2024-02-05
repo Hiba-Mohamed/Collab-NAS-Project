@@ -156,27 +156,31 @@ function getAllStaffForUnit(unit: IUnitObject): number {
         ) : (
           ""
         )}
-        <div className="sm:pb-6 sm:pt-12 flex w-full flex-col items-center justify-between py-6 sm:pl-60 lg:pl-96 sm:flex-row">
-          <h1 className=" text-2xl flex flex-row gap-2 lg:pl-48 font-bold sm:text-3xl lg:text-5xl ">
+        <div className="sm:pb-6 sm:pt-12 flex w-full flex-col items-center justify-between py-6">
+          <h1 className=" text-2xl flex flex-row gap-2 font-bold sm:text-3xl lg:text-5xl ">
             <p className="">{hospitalData.hospitalName}</p>
             <Link to="/getStarted">
               {" "}
               <img className="h-6 lg:h-8" src="images/edit-grey.png" />
             </Link>
           </h1>
+        </div>
+
+        <hr className="border-1 border-faint w-full max-w-6xl px-6"></hr>
+
+        <div className="flex flex-col w-full items-center sm:items-end pt-8">
+          {" "}
           <Link
             to="/addingNewUnit"
-            className="mx-auto hover:bg-primarylight text-white font-bold py-2 px-4  border-solid border-2 border-blue hover:border-primarylight sm:px-10 sm:py-1 bo sm:text-sm rounded focus:outline-none focus:shadow-outline bg-blue sm:mt-0 mt-6"
+            className="hover:bg-primarylight text-white font-bold border-solid sm:mx-12 lg:mx-48 border-2 w-32 sm:py-1 text-center border-blue hover:border-primarylight sm:text-sm rounded focus:outline-none focus:shadow-outline bg-blue"
           >
             + Add Unit
           </Link>
         </div>
 
-
-        <hr className="border-1 border-faint w-full max-w-6xl px-6"></hr>
         <div className="flex flex-col sm:flex-row flex-wrap justify-evenly pb-6">
           {hospitalUnitsList.map((unit: IUnitObject) => (
-            <div className="shadow-lg bg-white flex flex-col rounded-lg my-6 sm:my-12  max-w-sm mx-2 text-sm sm:text-xl w-56 sm:w-80 p-4">
+            <div className="shadow-lg bg-white flex flex-col rounded-lg my-6 sm:my-6  max-w-sm mx-2 text-sm sm:text-xl w-56 sm:w-80 p-4">
               {" "}
               <button
                 onClick={() => deleteUnit(unit.unitName)}
@@ -204,7 +208,6 @@ function getAllStaffForUnit(unit: IUnitObject): number {
                     onClick={() => editUnit(unit.unitName)}
                     className="flex flex-row mx-auto hover:bg-lightblue text-blue font-bold sm:px-10 sm:py-1 sm:text-sm py-2 px-6 rounded focus:outline-none focus:shadow-outline bg-white border-solid border-2 border-blue  sm:mt-0 mt-6"
                   >
-                  
                     <p> Edit</p>
                   </button>
                   <button

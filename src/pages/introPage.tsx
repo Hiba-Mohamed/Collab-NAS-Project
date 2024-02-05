@@ -27,7 +27,7 @@ export function LandingPage() {
         </div>
       </div>
       <div className="flex flex-row items-center sm:mt-28 mx-4 p-4 text-start text-lg">
-        <p className="font-bold text-blue text-xl sm:text-2xl lg:text-4xl">
+        <p className="font-bold text-blue text-xl sm:text-2xl lg:text-4xl py-12">
           A Quick Guide to Get Started Below:
         </p>
       </div>

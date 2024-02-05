@@ -7,7 +7,7 @@ export function StartUnitSheet() {
   console.log(unitName);
   if (unitName) {
     return (
-      <div className="flex flex-col items-center sm:pt-12 pt-14 gap-8 font-OpenSans min-h-screen bg-slate-50">
+      <div className="flex flex-col items-center sm:pt-12 pt-14 gap-8 font-OpenSans min-h-screen bg-sky-50">
         <div className="flex flex-col sm:flex-row items-start sm:items-center gap-4 sm:gap-6 px-4">
           <div className="flex flex-row gap-2 items-center text-blue text-lg font-bold">
             <p className="py-2 sm:py-1 px-4 sm:px-3 text-white font-bold sm:text-lg bg-blue rounded-full">
