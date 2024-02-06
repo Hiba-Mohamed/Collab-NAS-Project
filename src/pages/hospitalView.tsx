@@ -127,7 +127,7 @@ function getAllStaffForUnit(unit: IUnitObject): number {
                 <p className="text-xl font-bold mb-4">Are you sure?</p>
                 <p className="text-lg mb-4 text-center">
                   This action cannot be undone. Only click confirm if you are
-                  certain you would like to delete this nurse
+                  certain you would like to delete this unit
                 </p>
                 <p className="text text-lg ">
                   {" "}
